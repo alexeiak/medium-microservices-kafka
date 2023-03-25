@@ -16,4 +16,5 @@ spring:
     password: password
 
 topic:
-  name: t.food.order
+  name1: search_query
+#  name2: user_data
