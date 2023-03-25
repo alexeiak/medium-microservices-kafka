@@ -23,14 +23,14 @@ public class Config {
     }
 
     @Bean
-    public ProducerFactory<String, String> producerFactory() {
+    public ProducerFactory<String, Object> producerFactory() {
         // get configs on application.properties/yml
         Map<String, Object> properties = kafkaProperties.buildProducerProperties();
         return new DefaultKafkaProducerFactory<>(properties);
     }
 
     @Bean
-    public KafkaTemplate<String, String> kafkaTemplate() {
+    public KafkaTemplate<String, Object> kafkaTemplate() {
         return new KafkaTemplate<>(producerFactory());
     }
 
